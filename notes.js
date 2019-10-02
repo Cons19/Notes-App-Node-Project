@@ -22,13 +22,6 @@ const addNote = (title, body) => {
 const removeNote = title => {
     const notes = loadNotes();
 
-    // for(let i = 0; i < notes.length; i++) {
-    //     if(notes[i].title === title) {
-    //         notes.splice(i, 1);
-    //         console.log(title + " has been deleted!");
-    //     }
-    // }
-
     const notesToKeep = notes.filter(note => note.title !== title);
 
     if(notesToKeep.length < notes.length) {
